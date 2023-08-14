@@ -27,6 +27,6 @@ The Promotions element with Name = "Gallery" has a Description that contains the
 
 Usage- APITestSpecflowProject
 Open the Features folder.
-Open the APITest.feature file which has the Test Scenario and test steps.
+Open the APITest.feature file which has the Test Scenario and test steps.This framework is called Behaviour driven development framework and also adds to the reusability of the project.
 Run the @api tag to run the API test which will perform a GET Request and validate the acceptance criteria.
 Underneath the Test Steps there are Step definition class in the Step definition folder. 
