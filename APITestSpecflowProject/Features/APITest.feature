@@ -9,5 +9,5 @@ Scenario: Testing API for Categories Details
 	Then assert Promotions is not null and has <PromotionsName> and has a <Description> containing text
 	
 	Examples:
-	| statusCode | Name           | CanRelist | PromotionsName | Description               |
-	| 200        | Carbon credits | true      | Gallery        | Good position in category |
+	| Name           | CanRelist | PromotionsName | Description               |
+    | Carbon credits | true      | Gallery        | Good position in category |

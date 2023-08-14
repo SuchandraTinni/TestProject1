@@ -16,8 +16,6 @@ public class ApiRequest
         var responseContent = response.Content;
         using var document = JsonDocument.Parse(responseContent);
         
-        //var request = new RestRequest(contextPath, Method.Get);
-        
         return client.ExecuteGetAsync(request).Result;
     }
     

@@ -76,8 +76,8 @@ namespace TestProject1.APITestSpecflowProject.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Testing API for Categories Details")]
         [NUnit.Framework.CategoryAttribute("api")]
-        [NUnit.Framework.TestCaseAttribute("200", "Carbon credits", "true", "Gallery", "Good position in category", null)]
-        public async System.Threading.Tasks.Task TestingAPIForCategoriesDetails(string statusCode, string name, string canRelist, string promotionsName, string description, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Carbon credits", "true", "Gallery", "Good position in category", null)]
+        public async System.Threading.Tasks.Task TestingAPIForCategoriesDetails(string name, string canRelist, string promotionsName, string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "api"};
@@ -87,7 +87,6 @@ namespace TestProject1.APITestSpecflowProject.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("statusCode", statusCode);
             argumentsOfScenario.Add("Name", name);
             argumentsOfScenario.Add("CanRelist", canRelist);
             argumentsOfScenario.Add("PromotionsName", promotionsName);
