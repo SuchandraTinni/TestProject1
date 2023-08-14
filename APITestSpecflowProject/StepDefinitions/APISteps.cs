@@ -4,6 +4,7 @@ using TechTalk.SpecFlow;
 using TestProject1.APITestProject.Hooks;
 using System.Text.Json;
 using RestSharp;
+using TestProject1.APITestProject.APIPageClass;
 using static TestProject1.APITestProject.APIPageClass.ApiRequest;
 
 namespace TestProject1.APITestProject.StepDefinitions;
@@ -11,10 +12,10 @@ namespace TestProject1.APITestProject.StepDefinitions;
 [Binding]
 public class APISteps : BaseClass
 {
-    [Given(@"I perform a get request (.*)")]
-    public void GivenIPerformAGetRequest(string contextPath)
+    [Given(@"I perform a get request")]
+    public void GivenIPerformAGetRequest()
     {
-        _response = GetRequest(contextPath);
+        _response = GetRequest();
         Console.WriteLine(_response);
     }
 
@@ -34,6 +35,7 @@ public class APISteps : BaseClass
         var response = client.Execute<dynamic>(request);
         var responseContent = response.Content;
         using var document = JsonDocument.Parse(responseContent);
+        
         Assert.AreEqual("Carbon credits", document.RootElement.GetProperty("Name").GetString());
     }
 

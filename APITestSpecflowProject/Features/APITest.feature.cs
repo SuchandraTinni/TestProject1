@@ -76,8 +76,8 @@ namespace TestProject1.APITestSpecflowProject.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Testing API for Categories Details")]
         [NUnit.Framework.CategoryAttribute("api")]
-        [NUnit.Framework.TestCaseAttribute("Categories/6327/Details.json?catalogue=false", "200", "Carbon credits", "true", "Gallery", "Good position in category", null)]
-        public async System.Threading.Tasks.Task TestingAPIForCategoriesDetails(string contextPath, string statusCode, string name, string canRelist, string promotionsName, string description, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("200", "Carbon credits", "true", "Gallery", "Good position in category", null)]
+        public async System.Threading.Tasks.Task TestingAPIForCategoriesDetails(string statusCode, string name, string canRelist, string promotionsName, string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "api"};
@@ -87,7 +87,6 @@ namespace TestProject1.APITestSpecflowProject.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("contextPath", contextPath);
             argumentsOfScenario.Add("statusCode", statusCode);
             argumentsOfScenario.Add("Name", name);
             argumentsOfScenario.Add("CanRelist", canRelist);
@@ -105,7 +104,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 await this.ScenarioStartAsync();
 #line 6
- await testRunner.GivenAsync(string.Format("I perform a get request {0}", contextPath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ await testRunner.GivenAsync("I perform a get request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  await testRunner.ThenAsync(string.Format("assert get request {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -7,12 +7,18 @@ namespace TestProject1.APITestProject.APIPageClass;
 public class ApiRequest
 {
     
-    public static RestResponse GetRequest(string contextPath)
+    public static RestResponse GetRequest()
     {
+        var client = new RestClient("https://api.tmsandbox.co.nz/v1");
+        var request = new RestRequest("Categories/6327/Details.json", Method.Get);
+        request.AddParameter("catalogue", "false");
+        var response = client.Execute<dynamic>(request);
+        var responseContent = response.Content;
+        using var document = JsonDocument.Parse(responseContent);
         
-        var request = new RestRequest(contextPath, Method.Get);
+        //var request = new RestRequest(contextPath, Method.Get);
         
-        return new RestClient("https://api.tmsandbox.co.nz/v1").ExecuteGetAsync(request).Result;
+        return client.ExecuteGetAsync(request).Result;
     }
     
    
