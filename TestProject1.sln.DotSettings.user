@@ -1,6 +1,11 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d3a8dedf_002D068c_002D4ed6_002Daf24_002D1b222a84c8fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestApi" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::890FFC72-56A4-4F04-B997-CDB50DC55704::net7.0::TestProject1.APITestSpecflowProject.Features.APITestFeature.TestingAPIForCategoriesDetails&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::890FFC72-56A4-4F04-B997-CDB50DC55704::net7.0::TestProject1.APITestSpecflowProject.Features.APITestFeature.TestingAPIForCategoriesDetails&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::890FFC72-56A4-4F04-B997-CDB50DC55704::net7.0::TestProject1.ApiTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::96DD5E76-EB1F-4899-8BAC-ED856FF790E2::net7.0::TestProject1.ApiTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;96DD5E76-EB1F-4899-8BAC-ED856FF790E2/d:APITest/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

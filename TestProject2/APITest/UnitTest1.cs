@@ -1,4 +1,3 @@
-using System.Text.Json.Nodes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
@@ -6,15 +5,22 @@ using RestSharp;
 using Assert = NUnit.Framework.Assert;
 using System.Text.Json;
 using NuGet.Frameworks;
+using Xunit.Abstractions;
 
 
-namespace TestProject1;
+namespace TestProject2.APITest;
 
 [TestClass]
     
 public class ApiTests
 {
-    
+    private readonly ITestOutputHelper _testOutputHelper;
+
+    public ApiTests(ITestOutputHelper testOutputHelper)
+    {
+        _testOutputHelper = testOutputHelper;
+    }
+
     [TestMethod]
     public void TestApi()
     {
@@ -42,7 +48,7 @@ public class ApiTests
         Assert.IsNotNull(galleryPromotion);
         var description = galleryPromotion.GetProperty("Description").GetString();
         Assert.IsTrue(description.Contains("Good position in category"));
-        Console.WriteLine(responseContent);
+        _testOutputHelper.WriteLine(responseContent);
     }
 
     
